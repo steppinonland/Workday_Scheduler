@@ -52,7 +52,6 @@ for (let i = 0; i < hours.length; i++) {
 	// console.log(i);
 	console.log(hours[i]);
 	if (now < hours[i]) {
-		console.log(now);
 		// calling id through the for loop number so if the number is 9 the id is 9
 		$("#" + hours[i])
 			.removeClass("present")
@@ -63,6 +62,9 @@ for (let i = 0; i < hours.length; i++) {
 		$("#" + hours[i])
 			.removeClass("present")
 			.addClass("past");
+	} else {
+		$("#" + hours[i]) 
+			.addClass("present");
 	}
 }
 
